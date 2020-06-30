@@ -1,0 +1,44 @@
+footer {
+	&.section {
+		h1, h2, h3, h4, h5, h6 {
+			color: $theme-color;
+		}
+	}
+	.logo {
+		margin-bottom: 25px;
+	}
+	a:hover {
+		color: $light;
+	}
+	.copyright {
+		display: inline-block;
+		width: 100%;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		margin: 50px 0;
+		padding-top: 50px;
+		p {
+			margin-bottom: 0;
+		}
+		.social-icons {
+			margin-top: 0;
+			a {
+				border: none;
+				color: $light;
+				&:hover {
+					@include transform(none);
+					color: $theme-color;
+				}
+			}
+		}
+	}
+	.links {
+		.post-info {
+			display: block;
+			font-size: 11px;
+			@include transition(all 250ms);
+		}
+		a:hover .post-info {
+			color: $light;
+		}
+	}
+}

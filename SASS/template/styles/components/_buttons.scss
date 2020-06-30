@@ -1,0 +1,93 @@
+a {
+	color: $theme-color;
+	font-weight: 700;
+	&.link {
+		text-transform: uppercase;
+	}
+	&:hover, &:focus, &:active {
+		color: $theme-dark;
+	}
+}
+a, button, input, select, textarea {
+	text-decoration: none;
+	font-family: $buttons-font;
+	outline: 0;
+	border: none;
+	@include transition(all 200ms);
+}
+.btn {
+	background: $theme-color;
+	color: $black;
+	font-size: $button-size;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+	&.medium {
+		padding: 15px 30px;
+	}
+	&.large {
+		padding: 20px 50px;
+		font-size: 16px;
+	}
+	&.success {
+		background: $alert-success;
+		color: $light;
+	}
+	&.error {
+		background: $alert-error;
+		color: $light;
+	}
+	&.warning {
+		background: $alert-warning;
+		color: $light;
+	}
+	&.dark:hover, &.success, &.error, &.warning {
+		color: $light;
+	}
+	&:hover, &:focus, &:active {
+		background: $theme-dark;
+		color: $light;
+	}
+	&.dark {
+		background: $theme-dark;
+		color: $light;
+		&:hover {
+			background: $theme-color;
+			color: $black;
+		}
+	}
+	&.light {
+		background: $light;
+		&:hover {
+			background: $theme-color;
+			color: $black;
+		}
+	}
+	&.alt {
+		background: none;
+		&.dark {
+			border: 1px solid $black;
+			color: $black;
+			&:hover {
+				background: $black;
+				color: $light;
+				border-color: transparent;
+			}
+		}
+		&.light {
+			border: 1px solid $light;
+			color: $light;
+			&:hover {
+				background: $theme-color;
+				color: $black;
+				border-color: transparent;
+			}
+		}
+	}
+	i, span {
+		font-size: 18px;
+		margin-left: 15px;
+	}
+}
